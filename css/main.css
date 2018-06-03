@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 0;
+  background: #a18888;
+  font-size: 14px;
+  font-family: "Consolas", "微软雅黑";
+  -moz-user-select: none;
+  /*firefox需要前缀*/
+  user-select: none;
+  /*禁止选择*/
+  max-width: 450px;
+  cursor: pointer;
+}
+/*标题*/
+.title {
+  padding: 1rem 5%;
+  background: slategray;
+  color: #eb9c26;
+  box-shadow: 0 0.2rem 0.3rem rgba(50, 50, 50, 0.8);
+  text-align: center;
+  text-shadow: 2px 2px 1px #edd731;
+}
+/*九宫格*/
+.box {
+  position: absolute;
+  bottom: 20px;
+  top: 20px;
+  left: 0;
+  right: 0;
+  margin: 4.5rem 0 2rem 0;
+  padding: 2rem;
+  font-size: 1.2rem;
+  overflow: auto;
+}
+.box div {
+  display: flex;
+  justify-content: space-evenly;
+}
+.box div span {
+  width: 100%;
+  line-height: 2.5rem;
+  text-align: center;
+  border: 1px dotted #edcece;
+  border-right: 0;
+  /*去除相邻的一边*/
+  border-bottom: 0;
+  color: #81f95a;
+}
+.box div span.empty {
+  color: #a18888;
+}
+.box div span.fixed {
+  background-color: #896d6d;
+  color: #290d3d;
+}
+.box div span:nth-child(3n) {
+  /*每宫加粗*/
+  border-right: 3px solid #e4b87f;
+}
+.box div span:first-child {
+  /*最后一列底边*/
+  border-left: 3px solid #e4b87f;
+}
+.box div:nth-child(3n) {
+  border-bottom: 3px solid #e4b87f;
+}
+.box div:first-child {
+  /*最后一行右边*/
+  border-top: 3px solid #e4b87f;
+}
+/*弹出面板*/
+.pop {
+  position: absolute;
+  background: rgba(70, 75, 26, 0.707);
+  color: #fff;
+  width: 150px;
+  height: 190px;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px 5px #c5e04ba6;
+}
+.pop .row {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.pop .row > span {
+  width: 33%;
+  padding: 10px;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  font-size: 1.5rem;
+  display: inline-block;
+  border-top: 3px solid #e4b87f;
+  border-left: 3px solid #e4b87f;
+}
+.pop .row > span:last-child {
+  border-right: 3px solid #e4b87f;
+}
+.pop .row:last-child {
+  border-bottom: 3px solid #e4b87f;
+}
+/*弹出面板最下面的三个标记*/
+.nosure {
+  background: #ff51f0;
+}
+.sure {
+  background: yellow;
+}
+/*错误标记*/
+.error {
+  background: red;
+  color: #a18888;
+}
+/*隐藏弹出面板*/
+.hidden {
+  display: none;
+}
+/*按钮组*/
+.btns {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 10px;
+  height: 2rem;
+  background: slategray;
+  box-shadow: 0 -0.1rem 0.2rem rgba(50, 50, 50, 0.8);
+  display: flex;
+  justify-content: space-evenly;
+}
+.btns > button {
+  width: 20%;
+  font-size: 1.1rem;
+  text-align: center;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  border-radius: 15px;
+  border: 3px solid rgba(36, 226, 216, 0.6);
+  border-right: none;
+  border-left: none;
+}
+button:hover {
+  width: 21%;
+  font-size: 1.3rem;
+  color: #ffa600;
+}
