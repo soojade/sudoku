@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/main.js"></script>
+    <title>数独游戏</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="title">
+            <h1>数 独 游 戏</h1>
+        </div>
+        <!-- 九宫格 -->
+        <div class="box" id="box">
+        </div>
+
+        <!-- 按钮组 -->
+        <div class="btns">
+            <button id="check">验证</button>
+            <button id="reset">重置</button>
+            <button id="clear">清除</button>
+            <button id="rebuild">重建</button>
+        </div>
+        <!-- 弹出面板 -->
+        <div class="pop hidden" id="pop">
+            <div class="row">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+            </div>
+            <div class="row">
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+            </div>
+            <div class="row">
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+            </div>
+            <div class="row">
+                <span class="nosure">♂</span>
+                <span class="empty">❌</span>
+                <span class="sure">✔</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
