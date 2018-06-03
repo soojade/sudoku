@@ -1,4 +1,5 @@
 src/node_modules/
+dist/
 www/js/
 www/css/
 .vscode/
